@@ -1,3 +1,3 @@
 <?php
-header('location:/FONT_END/homepage.php');
+header('location:IMAGE/logo.png');
 ?>
