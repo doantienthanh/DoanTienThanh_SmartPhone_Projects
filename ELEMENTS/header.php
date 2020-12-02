@@ -16,13 +16,11 @@
 <img src="../IMAGE/logo.png" class="image-logo" alt="tienthanhshop">
 </div>
 <div class="col-8 col-s-8 center-main-header">
-main
 </div>
 <div class="col-2 col-s-2 right-main-header">
    <div class="quantity-customer-cart">0</div>
 <span><i class='fas fa-shopping-basket customer-cart'></i></span>
 <span class="price-customer-carts">20000000đ</span>
-
 </div>
     </div>
     <div class="menu-header">

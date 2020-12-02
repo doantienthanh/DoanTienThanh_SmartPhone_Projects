@@ -91,7 +91,6 @@
     }
     /* TOP HEADER */
     .top-header {
-        height: 22%;
         line-height: 250%;
         font-size: 12px;
     }
@@ -105,7 +104,7 @@
         margin-right: 8%;
     }
     .icon-top-header {
-        margin-top: 10px;
+        margin-top: 5px;
         font-size: 16px;
     }
     /* MAIN HEADER */
@@ -114,9 +113,6 @@
         width: 60px;
         height: 60px;
         margin-top: 5%;
-    }
-    .left-main-header {
-        width: 100%;
     }
     .right-center-header {
         width: 170%;
@@ -157,7 +153,6 @@
         margin-right: 8%;
     }
     .icon-top-header {
-        margin-top: 10px;
         font-size: 16px;
     }
     /* MAIN HEADER */
@@ -166,9 +161,6 @@
         width: 60px;
         height: 60px;
         margin-top: 5%;
-    }
-    .left-main-header {
-        width: 100%;
     }
     .right-center-header {
         width: 170%;
@@ -180,8 +172,9 @@
         font-size: 24px;
     }
     .quantity-customer-cart {
-        margin-top: 40%;
+        margin-top: 20%;
         margin-left: 15%;
+        font-size: 15px;
     }
     .right-main-header .price-customer-carts {
         display: none;
@@ -197,12 +190,20 @@
     }
     .image-logo {
         margin-left: 10%;
-        width: 65px;
-        height: 65px;
-        margin-top: 3%;
+        width: 70px;
+        height: 70px;
+        margin-top: 5%;
     }
     .header {
         height: 150px;
+    }
+    .quantity-customer-cart {
+        margin-top: 35%;
+        margin-left: 15%;
+        font-size: 15px;
+    }
+    .right-main-header .price-customer-carts {
+        display: none;
     }
 }
 
@@ -216,19 +217,28 @@
     }
     .image-logo {
         margin-left: 10%;
-        width: 70px;
-        height: 70px;
-        margin-top: 2%;
+        width: 80px;
+        height: 80px;
+        margin-top: 3.5%;
     }
     .header {
         height: 160px;
+    }
+    .customer-cart {
+        margin-left: 35%;
+    }
+    .quantity-customer-cart {
+        margin-top: 18%;
+        margin-left: 41%;
+        font-size: 15px;
     }
 }
 
 @media only screen and (min-width: 700px) {
     .icon-top-header {
-        margin-top: 5px;
+        margin-top: 2px;
         font-size: 21px;
+        margin-right: 0px;
     }
     .top-header {
         font-size: 15px;
@@ -237,16 +247,22 @@
         margin-left: 10%;
         width: 80px;
         height: 80px;
-        margin-top: 2%;
+        margin-top: 7%;
     }
     .header {
         height: 170px;
+    }
+    .customer-cart {
+        margin-left: 36%;
+    }
+    .top-header {
+        line-height: 200%;
     }
 }
 
 @media only screen and (min-width: 800px) {
     .icon-top-header {
-        margin-top: 10px;
+        margin-top: 5px;
         font-size: 24px;
     }
     .top-header {
@@ -256,7 +272,7 @@
         margin-left: 10%;
         width: 82px;
         height: 82px;
-        margin-top: 2%;
+        margin-top: 9%;
     }
     .header {
         height: 180px;
@@ -265,7 +281,7 @@
 
 @media only screen and (min-width: 900px) {
     .icon-top-header {
-        margin-top: 10px;
+        margin-top: 5px;
         font-size: 24px;
     }
     .top-header {
@@ -275,29 +291,44 @@
         margin-left: 10%;
         width: 100px;
         height: 100px;
-        margin-top: 2%;
+        margin-top: 10%;
     }
     .header {
         height: 200px;
     }
+    .customer-cart {
+        margin-left: 37%;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
+    .left-top-header span {
+        margin-left: 15%;
+    }
+    .right-top-header span {
+        margin-right: 2%;
+    }
     .icon-top-header {
-        margin-top: 10px;
+        margin-top: 5px;
         font-size: 26px;
     }
     .top-header {
         font-size: 18px;
     }
     .image-logo {
-        margin-left: 10%;
+        margin-left: 20%;
         width: 110px;
         height: 110px;
-        margin-top: 2%;
+        margin-top: 5%;
     }
     .header {
         height: 210px;
+    }
+    .right-main-header .price-customer-carts {
+        display: block;
+        margin-left: 50%;
+        font-size: 15px;
+        margin-top: 0;
     }
 }
 
@@ -306,17 +337,14 @@
         height: 220px;
     }
     .icon-top-header {
-        margin-top: 10px;
         font-size: 30px;
     }
     .top-header {
         font-size: 20px;
     }
     .image-logo {
-        margin-left: 10%;
         width: 115px;
         height: 115px;
-        margin-top: 1%;
     }
 }
 
@@ -325,17 +353,14 @@
         height: 230px;
     }
     .icon-top-header {
-        margin-top: 10px;
         font-size: 30px;
     }
     .top-header {
-        font-size: 22px;
+        font-size: 20px;
     }
     .image-logo {
-        margin-left: 10%;
         width: 120px;
         height: 120px;
-        margin-top: 1%;
     }
 }
 
@@ -344,17 +369,14 @@
         height: 240px;
     }
     .icon-top-header {
-        margin-top: 10px;
-        font-size: 32px;
+        font-size: 30px;
     }
     .top-header {
-        font-size: 22px;
+        font-size: 20px;
     }
     .image-logo {
-        margin-left: 10%;
         width: 125px;
         height: 125px;
-        margin-top: 1%;
     }
 }
 
@@ -363,16 +385,19 @@
         height: 250px;
     }
     .icon-top-header {
-        margin-top: 10px;
-        font-size: 34px;
+        font-size: 28px;
     }
     .top-header {
-        font-size: 22px;
+        font-size: 18px;
     }
     .image-logo {
-        margin-left: 10%;
         width: 130px;
         height: 130px;
-        margin-top: 1%;
     }
 }
+
+
+/* https://levunguyen.com/ */
+
+
+/* https://hoclaptrinhonline.asia/ */

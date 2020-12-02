@@ -1,15 +1,13 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
+    margin: 0;
 }
 
 .header {
     display: block;
     height: 250px;
-    width: 100%;
-    top: 0;
-    background-color: darkcyan;
-    color: white;
+    color: black;
 }
 
 
@@ -19,10 +17,9 @@ body {
     float: none;
     display: flex;
     height: 16%;
-    width: 100%;
     top: 0;
-    font-size: 20px;
-    line-height: 220%;
+    line-height: 200%;
+    background-color: cadetblue;
 }
 
 .left-top-header {
@@ -41,11 +38,11 @@ body {
 
 .right-top-header span {
     float: right;
-    margin-right: 5%;
 }
 
 .icon-top-header {
     font-size: 24px;
+    margin-right: 20px;
 }
 
 
@@ -53,20 +50,12 @@ body {
 
 .main-header {
     height: 64%;
-    width: 100%;
     display: flex;
 }
 
-
-/* .image-logo {
-    margin-left: 25%;
-    width: 100%;
-    height: 100%;
-    margin-top: 8px;
-} */
-
 .right-main-header {
     font-size: 20px;
+    line-height: initial;
 }
 
 .customer-cart {
@@ -84,5 +73,4 @@ body {
     height: 20%;
     background-color: slategray;
     color: white;
-    width: 100%;
 }
