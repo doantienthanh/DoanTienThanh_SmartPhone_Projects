@@ -14,12 +14,13 @@ body {
 /* TOP HEADER */
 
 .top-header {
+    color: white;
     float: none;
     display: flex;
     height: 16%;
     top: 0;
     line-height: 200%;
-    background-color: cadetblue;
+    background-image: url('../IMAGE/image_header.jpg');
 }
 
 .left-top-header {
@@ -42,7 +43,7 @@ body {
 
 .icon-top-header {
     font-size: 24px;
-    margin-right: 20px;
+    margin-right: 5%;
 }
 
 
