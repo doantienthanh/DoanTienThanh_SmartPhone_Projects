@@ -24,6 +24,25 @@
         </div>
     </div>
     <div class="menu-header">
-        menu
+        <ul class="item-menu-header" id="listMenu">
+        <li class="item-menu active"><a href="#"><i class='fas fa-home icon-homepage'></i>&nbsp;HOME</a></li>
+        <li class="item-menu"><a href="#">PRODUCTS</a></li>
+        <li class="item-menu"><a href="#">ACCESSORIES</a></li>
+        <li class="item-menu"><a href="#">ABOUT US</a></li>
+        <li class="item-menu"><a href="#">HELPS</a></li>
+        <a href="javascript:void(0);" class="icon-reponsive-menu" onclick="reponsiveMenu()">
+    <i class="fa fa-bars"></i>
+  </a>
+        </ul>
+        <ul class="search-products">
+            <form action="#" method="get">
+            <input type="text" class="input-search-products" placeholder="Search products...">
+            <i class='fas fa-search icon-search-prducts'></i>
+            </form>
+
+        </ul>
+        <ul class="contact">
+            <button class="btn-contact">Con</button>
+        </ul>
     </div>
 </div>

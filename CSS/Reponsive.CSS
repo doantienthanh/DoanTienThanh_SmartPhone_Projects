@@ -132,7 +132,7 @@
     } */
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     .header {
         height: 120px;
         top: 0;
@@ -232,7 +232,77 @@
         margin-left: 41%;
         font-size: 15px;
     }
+    .icon-search-prducts{
+        font-size: 100%;
+        margin-top: 4%;
+    }
 }
+@media only screen and (max-width: 680px) {
+    .menu-header {
+        height: 25%;
+    }
+    .item-menu-header{ 
+        width: 30%;
+        padding-inline-start:0%;
+    }
+    .item-menu-header .item-menu{
+        background-color: #333;
+        border-bottom: 1px solid white;
+        width: 100%;
+        text-align: left;
+        display: none;
+    }
+    .icon-reponsive-menu{
+        display: block;
+        float: left;
+        color: aliceblue;
+        font-size: 28px;
+        margin-left: 3%;
+    }
+    .responsive-menus {position: relative;}
+    .responsive-menus .icon-reponsive-menu{
+        position: absolute;
+        left: 0;
+        top:0;
+    }
+   .responsive-menus .item-menu{
+    float: none;
+    display: block;
+    text-align: left;
+    background-color:  #333;
+    }
+    .responsive-menus .active{
+        margin-top: 30px;
+    }
+    .responsive-menus{
+        display: block;
+    }
+    .responsive-menus .item-menu a{
+margin-left: 10%;
+    }
+    /* SEARCH */
+    .search-products{
+        width: 60%;
+        padding-inline-start: 0px;
+    }
+    .input-search-products{
+        margin-left: -15%;
+        float: left;
+        margin-right: 50%;
+        width: 100%;
+        border: 1px solid white;
+    }
+    .icon-search-prducts{
+        margin-left: 81%;
+            font-size: 80%;
+            margin-top: 4%;
+        }
+        .contact{
+           width: 10%;
+        }
+
+}
+
 
 @media only screen and (min-width: 700px) {
     .icon-top-header {
@@ -278,7 +348,15 @@
         height: 180px;
     }
 }
-
+@media only screen and (max-width: 900px) {
+   
+    .item-menu{
+        font-size: 12px;
+    }
+    ::placeholder { 
+        font-size: 12px;
+    }
+}
 @media only screen and (min-width: 900px) {
     .icon-top-header {
         margin-top: 5px;
@@ -298,6 +376,12 @@
     }
     .customer-cart {
         margin-left: 37%;
+    }
+    .icon-search-prducts {
+        position: absolute;
+        font-size: 140%;
+        margin-left: 74%;
+        margin-top: 3%;
     }
 }
 
@@ -330,6 +414,7 @@
         font-size: 15px;
         margin-top: 0;
     }
+   
 }
 
 @media only screen and (min-width: 1100px) {
