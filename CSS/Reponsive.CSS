@@ -3,47 +3,6 @@
     [class*="col-"] {
         width: 100%;
     }
-    
-    @media only screen and (min-width: 600px) {
-        /* For tablets: */
-        .col-s-1 {
-            width: 8.33%;
-        }
-        .col-s-2 {
-            width: 16.66%;
-        }
-        .col-s-3 {
-            width: 25%;
-        }
-        .col-s-4 {
-            width: 33.33%;
-        }
-        .col-s-5 {
-            width: 41.66%;
-        }
-        .col-s-6 {
-            width: 50%;
-        }
-        .col-s-7 {
-            width: 58.33%;
-        }
-        .col-s-8 {
-            width: 66.66%;
-        }
-        .col-s-9 {
-            width: 75%;
-        }
-        .col-s-10 {
-            width: 83.33%;
-        }
-        .col-s-11 {
-            width: 91.66%;
-        }
-        .col-s-12 {
-            width: 100%;
-        }
-    }
-    
     @media only screen and (min-width: 768px) {
         /* For desktop: */
         .col-1 {
@@ -327,6 +286,30 @@
         .name-shops {
             font-size: 100%;
         }
+        /* REPONSIVE CATEGORY  */
+        .list-categories{
+            display: none;
+        }
+       .link-reponsive-categories{
+           display: block;
+           margin-top: 20px;
+           margin-left: 1%;
+           color:  #4CAF50;;
+           height: 40px;
+           text-decoration: none;
+       }
+       .icon-categories{
+           font-size: 30px;
+       }
+       .main-body{
+           margin-top: 10px;
+       }
+       .list-categories .reponsive-categories .list-item{
+           display: block;
+       }
+       .reponsive-categories{
+        position: relative;
+    }
     }
     
     @media only screen and (min-width: 680px) {
@@ -347,6 +330,17 @@
             font-size: 80%;
             margin-top: 5%;
         }
+        /* CATEGORY */
+        .category{
+            width: 45%;
+        }
+        .icon-categories{
+            font-size: 20px;
+        }
+        .content-categories{
+            font-size: 16px;
+        }
+        
     }
     
     @media only screen and (min-width: 700px) {
@@ -461,6 +455,18 @@
             width: 28px;
             margin-left: 10%;
         }
+        .category{
+            width: 35%;
+        }
+        .icon-categories{
+            font-size: 30px;
+        }
+        .content-categories{
+            font-size: 20px;
+        }
+        .item-menu {
+            font-size: 14px;
+        }
     }
     
     @media only screen and (min-width: 1000px) {
@@ -512,6 +518,9 @@
             width: 115px;
             height: 115px;
         }
+        .category{
+            width: 28%;
+        }
     }
     
     @media only screen and (min-width: 1200px) {
@@ -527,6 +536,12 @@
         .image-logo {
             width: 120px;
             height: 120px;
+        }
+        .item-menu {
+            font-size: 16px;
+        }
+        .category{
+            width:26%;
         }
     }
     
@@ -559,6 +574,9 @@
         .image-logo {
             width: 130px;
             height: 130px;
+        }
+        .category{
+            width:22%;
         }
     }
     /* https://levunguyen.com/ */

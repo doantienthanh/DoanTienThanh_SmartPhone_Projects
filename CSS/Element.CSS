@@ -1,0 +1,44 @@
+/* CATEGORIES */
+.list-categories{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    display: block;
+    margin-left: 10%;
+    width: 80%;
+    background-color: #333;
+}
+.title-categories{
+    height: 40px;
+    line-height: 40px;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 2px solid wheat;
+    background-color: #4CAF50;
+}
+.list-item{
+    padding-inline-start: 0px;
+}
+.item-categories{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid wheat;
+}
+.link-categories{
+margin-left: 10%;
+color: white;
+text-decoration: none;
+list-style: none;
+}
+.icon-categories{
+    font-size: 30px;
+    margin-top: 5px;
+    margin-left: 5%;
+}
+.content-categories{
+    font-size: 20px;
+    height: 40px;
+}
+.link-reponsive-categories{
+    display: none;
+}
