@@ -16,6 +16,7 @@
             <img src="../IMAGE/logo.png" class="image-logo" alt="tienthanhshop">
         </div>
         <div class="col-8 col-s-8 center-main-header">
+        <b class="name-shops">TIEN THANH MOBILE</b>
         </div>
         <div class="col-2 col-s-2 right-main-header">
             <div class="quantity-customer-cart">0</div>
@@ -42,7 +43,7 @@
 
         </ul>
         <ul class="contact">
-            <button class="btn-contact">Con</button>
+            <button class="btn-contact"><i class='fas fa-phone icon-contact'></i></button><span class="number-phone-contact">&ensp;0946613608</span>
         </ul>
     </div>
 </div>

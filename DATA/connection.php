@@ -1,0 +1,3 @@
+<?php
+$dataname="name"
+?>
