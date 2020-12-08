@@ -8,12 +8,12 @@
         </div>
         <div class="col-4  right-top-header">
             <span><i class='fas fa-sign-in-alt icon-top-header'></i></span>
-            <span><i class='fas fa-user-alt icon-top-header'></i></span>
+         <a href="register.php" class="link-header-users"><span><i class='fas fa-user-alt icon-top-header'></i></span></a>
         </div>
     </div>
     <div class="main-header">
         <div class="col-3 col-s-3 left-main-header">
-            <img src="../IMAGE/logo.png" class="image-logo" alt="tienthanhshop">
+            <img src="../../IMAGE/logo.png" class="image-logo" alt="tienthanhshop">
         </div>
         <div class="col-8  center-main-header">
             <b class="name-shops"></b>
@@ -40,7 +40,6 @@
                 <input type="text" class="input-search-products" placeholder="Search products...">
                 <i class='fas fa-search icon-search-prducts'></i>
             </form>
-
         </ul>
         <ul class="contact">
             <button class="btn-contact"><i class='fas fa-phone icon-contact'></i></button><span

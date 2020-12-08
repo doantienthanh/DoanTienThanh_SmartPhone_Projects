@@ -3,7 +3,11 @@ body {
     font-size: 15px;
     margin: 0;
 }
-
+.link-header-users{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
 .header {
     display: block;
     height: 250px;

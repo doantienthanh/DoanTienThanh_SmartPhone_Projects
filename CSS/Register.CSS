@@ -1,0 +1,83 @@
+.body-register {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+}
+
+.border-register {
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 50px;
+    background: linear-gradient(to bottom, #ff99cc 39%, #33ccff 86%);
+    height: 430px;
+    display: block;
+    box-shadow: 5px 10px 20px inset;
+}
+
+.title-register {
+    top: 0;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+}
+
+.text-center-title {
+    font-size: 60px;
+    text-align: center;
+}
+
+.content-register {
+    height: 270px;
+    width: 100%;
+}
+
+.form-register {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.text-group {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    margin-left: 20%;
+}
+.icons-register{
+    font-size: 25px;
+    margin-right: 10px;
+    width: 30px;
+}
+.item-input-register {
+    height: 25px;
+    width: 50%;
+    display: block;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    border-bottom: 1px solid red;
+    background: transparent;
+    font-size: 15px;
+}
+::placeholder {
+    color: black;
+    font-size: 13px;
+}
+
+.btn-register{
+width: 50%;
+margin-left: 27%;
+height: 40px;
+margin-top: 20px;
+font-size: 20px;
+background-color: #ff99cc;
+border: none;
+box-shadow: 5px;
+border-radius: 5px;
+}
+.btn-register:hover{
+    width: 54%;
+    margin-top: 22px;
+    height: 45px;
+    margin-left: 25%;
+}
