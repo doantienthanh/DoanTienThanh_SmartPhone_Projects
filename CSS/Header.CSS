@@ -3,11 +3,13 @@ body {
     font-size: 15px;
     margin: 0;
 }
-.link-header-users{
+
+.link-header-users {
     color: white;
     text-decoration: none;
     list-style: none;
 }
+
 .header {
     display: block;
     height: 250px;
@@ -41,13 +43,26 @@ body {
     background-color: azure;
 } */
 
+.right-top-header {
+    display: flex;
+}
+
+.image-user {
+    float: right;
+}
+
 .right-top-header span {
     float: right;
 }
 
 .icon-top-header {
     font-size: 24px;
-    margin-right: 5%;
+    margin-left: 95%;
+}
+
+.link-header-users {
+    width: 40%;
+    float: right;
 }
 
 
@@ -194,4 +209,20 @@ ul {
     background-color: #4CAF50;
     border: 2px solid red;
     outline: none;
+}
+
+.header-icon-1 {
+    width: 70%;
+}
+
+.header-icon-2 {
+    width: 25%;
+}
+
+.header-icon-3 {
+    width: 90%;
+}
+
+.header-icon-4 {
+    width: 5%;
 }

@@ -1,4 +1,4 @@
 <?php
-require_once('DATA/connection.php');
-header('location:FONT_END/USERS/homepage.php');
+require_once('PHP/DATA/connection.php');
+header('location:PHP/FONT_END/USERS/homepage.php');
 ?>

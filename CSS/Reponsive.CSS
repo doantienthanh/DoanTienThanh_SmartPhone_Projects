@@ -3,6 +3,7 @@
     [class*="col-"] {
         width: 100%;
     }
+    
     @media only screen and (min-width: 768px) {
         /* For desktop: */
         .col-1 {
@@ -42,7 +43,7 @@
             width: 100%;
         }
     }
-
+    
     @media only screen and (max-width: 400px) {
         .btn-contact {
             width: 25px;
@@ -99,7 +100,6 @@
             height: 80%;
             width: 25px;
         }
-      
     }
     
     @media only screen and (max-width: 500px) {
@@ -111,7 +111,7 @@
         .top-header {
             height: 22%;
             line-height: 250%;
-            font-size: 12px;
+            font-size: 10px;
         }
         .left-top-header span {
             margin-left: 5%;
@@ -148,6 +148,9 @@
         }
         .right-main-header .price-customer-carts {
             display: none;
+        }
+        .user_name_login {
+            font-size: 13px;
         }
     }
     
@@ -288,35 +291,35 @@
             font-size: 100%;
         }
         /* REPONSIVE CATEGORY  */
-        .list-categories{
+        .list-categories {
             display: none;
         }
-       .link-reponsive-categories{
-           display: block;
-           margin-top: 20px;
-           margin-left: 1%;
-           color:  #4CAF50;;
-           height: 40px;
-           text-decoration: none;
-       }
-       .icon-categories{
-           font-size: 30px;
-       }
-       .main-body{
-           margin-top: 10px;
-       }
-         /* FORM REGISTER */
+        .link-reponsive-categories {
+            display: block;
+            margin-top: 20px;
+            margin-left: 1%;
+            color: #4CAF50;
+            ;
+            height: 40px;
+            text-decoration: none;
+        }
+        .icon-categories {
+            font-size: 30px;
+        }
+        .main-body {
+            margin-top: 10px;
+        }
+        /* FORM REGISTER */
         .border-register {
             width: 80%;
             margin-left: 10%;
             margin-top: 30px;
             height: 350px;
         }
-         .title-register {
+        .title-register {
             height: 70px;
             line-height: 70px;
         }
-
         .text-center-title {
             font-size: 40px;
         }
@@ -324,8 +327,21 @@
             margin-left: 10%;
         }
         .item-input-register {
-            width:70% ;
-        } 
+            width: 70%;
+        }
+        .header-icon-1 {
+            width: 60%;
+        }
+        .header-icon-2 {
+            float: right;
+            width: 30%;
+        }
+        .header-icon-3 {
+            width: 80%;
+        }
+        .header-icon-4 {
+            width: 10%;
+        }
     }
     
     @media only screen and (min-width: 680px) {
@@ -347,28 +363,26 @@
             margin-top: 5%;
         }
         /* CATEGORY */
-        .category{
+        .category {
             width: 45%;
         }
-        .icon-categories{
+        .icon-categories {
             font-size: 20px;
         }
-        .content-categories{
+        .content-categories {
             font-size: 16px;
         }
-
-          /* FORM REGISTER */
-          .border-register {
+        /* FORM REGISTER */
+        .border-register {
             width: 60%;
             margin-left: 20%;
             margin-top: 50px;
             height: 380px;
         }
-         .title-register {
+        .title-register {
             height: 80px;
             line-height: 80px;
         }
-
         .text-center-title {
             font-size: 45px;
         }
@@ -376,8 +390,8 @@
             margin-left: 10%;
         }
         .item-input-register {
-            width:70% ;
-        } 
+            width: 70%;
+        }
     }
     
     @media only screen and (min-width: 700px) {
@@ -492,30 +506,29 @@
             width: 28px;
             margin-left: 10%;
         }
-        .category{
+        .category {
             width: 35%;
         }
-        .icon-categories{
+        .icon-categories {
             font-size: 30px;
         }
-        .content-categories{
+        .content-categories {
             font-size: 20px;
         }
         .item-menu {
             font-size: 14px;
         }
-           /* FORM REGISTER */
-           .border-register {
+        /* FORM REGISTER */
+        .border-register {
             width: 40%;
             margin-left: 30%;
             margin-top: 50px;
             height: 400px;
         }
-         .title-register {
+        .title-register {
             height: 90px;
             line-height: 90px;
         }
-
         .text-center-title {
             font-size: 50px;
         }
@@ -523,7 +536,7 @@
             margin-left: 14%;
         }
         .item-input-register {
-            width:60% ;
+            width: 60%;
         }
     }
     
@@ -576,21 +589,20 @@
             width: 115px;
             height: 115px;
         }
-        .category{
+        .category {
             width: 28%;
         }
-           /* FORM REGISTER */
-           .border-register {
+        /* FORM REGISTER */
+        .border-register {
             width: 36%;
             margin-left: 34%;
             margin-top: 50px;
             height: 400px;
         }
-         .title-register {
+        .title-register {
             height: 90px;
             line-height: 90px;
         }
-
         .text-center-title {
             font-size: 50px;
         }
@@ -598,7 +610,7 @@
             margin-left: 14%;
         }
         .item-input-register {
-            width:60% ;
+            width: 60%;
         }
     }
     
@@ -619,21 +631,20 @@
         .item-menu {
             font-size: 16px;
         }
-        .category{
-            width:26%;
+        .category {
+            width: 26%;
         }
-          /* FORM REGISTER */
-          .border-register {
+        /* FORM REGISTER */
+        .border-register {
             width: 36%;
             margin-left: 35%;
             margin-top: 50px;
             height: 430px;
         }
-         .title-register {
+        .title-register {
             height: 100px;
             line-height: 100px;
         }
-
         .text-center-title {
             font-size: 55px;
         }
@@ -641,8 +652,8 @@
             margin-left: 15%;
         }
         .item-input-register {
-            width:55% ;
-        } 
+            width: 55%;
+        }
     }
     
     @media only screen and (min-width: 1300px) {
@@ -675,32 +686,31 @@
             width: 130px;
             height: 130px;
         }
-        .category{
-            width:22%;
+        .category {
+            width: 22%;
         }
-              /* FORM REGISTER */
-              .border-register {
-                width: 30%;
-                margin-left: 35%;
-                margin-top: 50px;
-                height: 430px;
-            }
-             .title-register {
-                top: 0;
-                width: 100%;
-                height: 100px;
-                line-height: 100px;
-            }
-    
-            .text-center-title {
-                font-size: 60px;
-            }
-            .text-group {
-                margin-left: 20%;
-            }
-            .item-input-register {
-                width: 50%;
-            } 
+        /* FORM REGISTER */
+        .border-register {
+            width: 30%;
+            margin-left: 35%;
+            margin-top: 50px;
+            height: 430px;
+        }
+        .title-register {
+            top: 0;
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+        }
+        .text-center-title {
+            font-size: 60px;
+        }
+        .text-group {
+            margin-left: 20%;
+        }
+        .item-input-register {
+            width: 50%;
+        }
     }
     /* https://levunguyen.com/ */
     /* https://hoclaptrinhonline.asia/ */

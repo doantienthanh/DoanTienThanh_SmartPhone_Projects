@@ -36,6 +36,7 @@
     width: 100%;
     display: block;
 }
+
 .text-group {
     display: flex;
     width: 100%;
@@ -43,11 +44,13 @@
     height: 30px;
     margin-left: 20%;
 }
-.icons-register{
+
+.icons-register {
     font-size: 25px;
     margin-right: 10px;
     width: 30px;
 }
+
 .item-input-register {
     height: 25px;
     width: 50%;
@@ -59,23 +62,25 @@
     background: transparent;
     font-size: 15px;
 }
+
 ::placeholder {
     color: black;
     font-size: 13px;
 }
 
-.btn-register{
-width: 50%;
-margin-left: 27%;
-height: 40px;
-margin-top: 20px;
-font-size: 20px;
-background-color: #ff99cc;
-border: none;
-box-shadow: 5px;
-border-radius: 5px;
+.btn-register {
+    width: 50%;
+    margin-left: 27%;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: #ff99cc;
+    border: none;
+    box-shadow: 5px;
+    border-radius: 5px;
 }
-.btn-register:hover{
+
+.btn-register:hover {
     width: 54%;
     margin-top: 22px;
     height: 45px;

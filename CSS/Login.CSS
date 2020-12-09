@@ -1,0 +1,153 @@
+    .body-login {
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+    }
+    
+    .border-login {
+        width: 26%;
+        margin-left: 37%;
+        margin-top: 50px;
+        background: linear-gradient(to bottom, #ff99cc 39%, #33ccff 86%);
+        height: 370px;
+        display: block;
+        box-shadow: 5px 10px 20px inset;
+    }
+    
+    .title-login {
+        height: 45%;
+        text-align: center;
+        line-height: 250px;
+    }
+    
+    .icon-login {
+        margin-top: 10px;
+        color: black;
+        font-size: 100px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid black;
+        border-radius: 25%;
+        background-color: white;
+    }
+    
+    .content-login {
+        height: 45%;
+        display: block;
+    }
+    
+    .text-login {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+        height: 30px;
+        margin-left: 20%;
+    }
+    
+     ::placeholder {
+        color: black;
+        font-size: 13px;
+    }
+    
+    .item-input-login {
+        height: 25px;
+        width: 50%;
+        display: block;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+        border-bottom: 1px solid red;
+        background: transparent;
+        font-size: 15px;
+    }
+    
+    .icons-login {
+        font-size: 25px;
+        margin-right: 10px;
+        width: 30px;
+    }
+    
+    .btn-login {
+        width: 50%;
+        margin-left: 27%;
+        height: 40px;
+        margin-top: 20px;
+        font-size: 20px;
+        background-color: #ff99cc;
+        border: none;
+        box-shadow: 5px;
+        border-radius: 5px;
+    }
+    
+    .btn-login:hover {
+        width: 54%;
+        margin-top: 22px;
+        height: 45px;
+        margin-left: 25%;
+    }
+    
+    .foget-pass {
+        margin-top: 500px;
+        margin-left: 60%;
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    .footer-login {
+        height: 10%;
+        line-height: 1px;
+    }
+    
+    .showError {
+        color: red;
+        font-size: 13px;
+        text-align: center;
+    }
+    
+    @media only screen and (max-width: 680px) {
+        .border-login {
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 30px;
+        }
+    }
+    
+    @media only screen and (min-width:680px) {
+        .border-login {
+            width: 44%;
+            margin-left: 28%;
+            margin-top: 30px;
+        }
+    }
+    
+    @media only screen and (min-width:900px) {
+        .border-login {
+            width: 44%;
+            margin-left: 28%;
+            margin-top: 35px;
+        }
+    }
+    
+    @media only screen and (min-width:1000px) {
+        .border-login {
+            width: 40%;
+            margin-left: 30%;
+            margin-top: 40px;
+        }
+    }
+    
+    @media only screen and (min-width:1200px) {
+        .border-login {
+            width: 34%;
+            margin-left: 33%;
+            margin-top: 45px;
+        }
+    }
+    
+    @media only screen and (min-width:1400px) {
+        .border-login {
+            width: 26%;
+            margin-left: 37%;
+            margin-top: 50px;
+        }
+    }
