@@ -17,11 +17,11 @@
     </div>
     <div class="menu-header">
         <ul class="item-menu-header" id="listMenu">
-            <li class="item-menu active"><a href="#"><i class='fas fa-home icon-homepage'></i>&nbsp;HOME</a></li>
-            <li class="item-menu"><a href="#">PRODUCTS</a></li>
-            <li class="item-menu"><a href="#">ACCESSORIES</a></li>
-            <li class="item-menu"><a href="#">ABOUT US</a></li>
-            <li class="item-menu"><a href="#">HELPS</a></li>
+            <a href="homepage.php" class="link-menu"> <li class="item-menu active"><i class='fas fa-home icon-homepage'></i>&nbsp;HOME</li></a>
+            <a href="products.php" class="link-menu"><li class="item-menu"><span>PRODUCTS</span></li></a>
+            <a href="accessories.php" class="link-menu"><li class="item-menu"><span>ACCESSORIES</span></li></a>
+            <a href="aboutUs.php" class="link-menu"><li class="item-menu"><span>ABOUT US</span></li></a>
+            <a href="help.php" class="link-menu"><li class="item-menu"><span>HELPS</span></li></a>
             <a href="javascript:void(0);" class="icon-reponsive-menu" onclick="reponsiveMenu()">
                 <i class="fa fa-bars"></i>
             </a>

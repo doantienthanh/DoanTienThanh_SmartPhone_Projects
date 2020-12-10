@@ -342,6 +342,10 @@
         .header-icon-4 {
             width: 10%;
         }
+        .responsive-menus .item-menu span,
+        .responsive-menus .item-menu i {
+            margin-left: 10%;
+        }
     }
     
     @media only screen and (min-width: 680px) {

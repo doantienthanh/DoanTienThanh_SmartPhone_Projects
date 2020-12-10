@@ -226,3 +226,15 @@ ul {
 .header-icon-4 {
     width: 5%;
 }
+
+.link-menu {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    width: 20%;
+    display: contents;
+}
+
+.item-categories span {
+    margin-left: 10%;
+}

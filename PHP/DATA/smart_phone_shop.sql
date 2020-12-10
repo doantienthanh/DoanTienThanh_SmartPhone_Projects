@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2020 at 05:48 AM
+-- Generation Time: Dec 10, 2020 at 12:54 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -33,6 +33,18 @@ CREATE TABLE `brands` (
   `created_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `brands`
+--
+
+INSERT INTO `brands` (`id`, `name_brand`, `created_date`) VALUES
+(1, 'APPLE', '2000-05-20'),
+(2, 'OPPO', '2000-05-20'),
+(3, 'XIAOMI', '2000-05-20'),
+(4, 'SAM SUNG', '2000-05-20'),
+(5, 'SONY', '2000-05-20'),
+(6, 'NOKIA', '2000-05-20');
+
 -- --------------------------------------------------------
 
 --
@@ -44,6 +56,14 @@ CREATE TABLE `categories` (
   `name_categories` varchar(220) NOT NULL,
   `created_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `name_categories`, `created_date`) VALUES
+(1, 'SMART PHONE', '2000-05-20'),
+(2, 'PHỤ KIỆN', '2000-05-20');
 
 -- --------------------------------------------------------
 
@@ -165,13 +185,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `details`
