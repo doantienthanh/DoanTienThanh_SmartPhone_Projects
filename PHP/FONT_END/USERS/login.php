@@ -23,12 +23,14 @@
                 <div class="border-icon-login"><i class="fas fa-user-alt icon-login"></i></div>
             </div>
             <div class="content-login">
-               <form action="../../BACK_END/auth.php" method="post" onsubmit="return checkLogin()">
-               <div class='text-login'><i class="fas fa-user-alt icons-login"></i><input type="text"
-                        name="userNameLogin" id="userNameLogin" class="item-input-login" placeholder="Users name"></div>
-                <div class='text-login'><i class="fas fa-lock icons-login"></i><input type="password"
-                        name="passwordLogin" id="passwordLogin" class="item-input-login" placeholder="Password"></div>
-                        <?php
+                <form action="../../BACK_END/auth.php" method="post" onsubmit="return checkLogin()">
+                    <div class='text-login'><i class="fas fa-user-alt icons-login"></i><input type="text"
+                            name="userNameLogin" id="userNameLogin" class="item-input-login" placeholder="Users name or email">
+                    </div>
+                    <div class='text-login'><i class="fas fa-lock icons-login"></i><input type="password"
+                            name="passwordLogin" id="passwordLogin" class="item-input-login" placeholder="Password">
+                    </div>
+                    <?php
                         if(isset($_GET['error_login'])){
                             echo"<span class='showError' style='color:red; color: red;
                             font-size: 13px;
@@ -38,8 +40,8 @@
                             '>".$_GET['error_login']."</span>";
                         }
                         ?>
-                <button type="submit" class="btn-submit btn-login" name="btn_login" id="btn_login">Login</button>
-               </form>
+                    <button type="submit" class="btn-submit btn-login" name="btn_login" id="btn_login">Login</button>
+                </form>
             </div>
             <div class="footer-login">
                 <a href="#" class="foget-pass">Forgot password !</a>

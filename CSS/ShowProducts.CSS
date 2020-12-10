@@ -1,0 +1,21 @@
+.body-show-products {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+}
+
+.left-show-products {
+    width: 20%;
+    height: 1000px;
+    background-color: khaki;
+}
+
+.center-show-products {
+    width: 5%;
+}
+
+.right-show-products {
+    width: 75%;
+    height: auto;
+}

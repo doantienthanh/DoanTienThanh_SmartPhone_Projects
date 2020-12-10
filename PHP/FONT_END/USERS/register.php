@@ -23,7 +23,7 @@
                 <h1 class="text-center-title">SIGN UP</h1>
             </div>
             <div class="content-register">
-                <form action="" method="post" class="form-register" onsubmit="return checkRegister()">
+                <form action="../../BACK_END/auth.php" method="POST" class="form-register" onsubmit="return checkRegister()">
                     <div class='text-group'><i class="fas fa-user-alt icons-register"></i><input type="text"
                             name="userName" id="userName" class="item-input-register" placeholder="Enter your user name"></div>
                     <div class='text-group'><i class="fas fa-lock icons-register"></i><input type="password"
@@ -34,8 +34,17 @@
                             name="numberPhone"  id="phoneNumber" class="item-input-register" placeholder="Enter your number phone"></div>
                     <div class='text-group'><i class="fas fa-map-marker-alt icons-register"></i><input type="text"
                             name="address" id="address" class="item-input-register" placeholder="Enter your address"></div>
-                    <p class="showError" id="showError"></p>
-                    <button class="btn-submit btn-register">sign up</button>
+                   <?php
+                   if(isset($_GET['error'])){
+                    echo"<span class='showError' style='color:red; color: red;
+                    font-size: 13px;
+                    text-align: center;
+                    padding:20px;
+                    margin-left:30%;
+                    '><b>".$_GET['error']."</b></span>";
+                   }
+                   ?>
+                    <button class="btn-submit btn-register" type="submit" name="btn_rigister" id="btn_rigister">sign up</button>
                 </form>
             </div>
         </div>
