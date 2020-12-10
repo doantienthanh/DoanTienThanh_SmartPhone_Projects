@@ -1,3 +1,6 @@
+<?php
+require_once('../../DATA/connection.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +16,16 @@
 <?php
     include('../../ELEMENTS/header.php');
     ?>
+    <div class="body-page">
+    <div class="col-2 category">
+      <?php
+        include('../../ELEMENTS/categories.php');
+      ?>
+        </div>
+        <div class="col-10 slide-shop">
+          
+        </div>
+    </div>
     <?php
     include('../../ELEMENTS/bottom.php');
     ?>

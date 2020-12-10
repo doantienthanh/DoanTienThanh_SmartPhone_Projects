@@ -3,15 +3,15 @@
         <i class='fas fa-globe icon-categories'></i><span class="content-categories">&nbsp;CATEGORIES</span>
     </div>
         <?php
+        
 $categories='SELECT * FROM categories';
-$resultCategories=mysqli_query($connection, $categories);
+$resultCategories=$connection->query($categories);
 echo "<ul class='list-item'>";
 foreach($resultCategories as $element){
     if(isset($_GET['category'])){
          $id_brands=$_GET['category'];
         if($id_brands==$element['id']){
-            echo "<a href='categories.php?category=".$element['id']."'  class='link-categories'><li class='item-categories'><span>".$element['name_categories']."</span></li></a>";
-            echo"<hr style='height:5px;border-width:0;color:gray;background-color:red'/>";  
+            echo "<a href='categories.php?category=".$element['id']."'  class='link-categories'><li class='item-categories item-active'><span>".$element['name_categories']."</span></li></a>";
         }else{
             echo "<a href='categories.php?category=".$element['id']."' class='link-categories'><li class='item-categories'><span>".$element['name_categories']."</span></li></a>";
         }

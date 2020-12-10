@@ -1,0 +1,149 @@
+.top-header {
+    height: 40px;
+}
+.body-admin-page{
+    width: 100%;
+    display: flex;
+}
+.list-menu-admin{
+    width: 15%;
+    height: 1000px;
+    background-color: #333;
+    display: block;
+}
+
+.link-dashboard{
+    width: 100%;
+    height: 60px;
+    list-style: none;
+    color: white;
+    line-height: 60px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.dashboard-active{
+    background-color: #4CAF50;
+    height: 60px;
+}
+.item-dashboard:hover{
+    background-color: #4CAF50;
+}
+.icon-dashboard{
+    font-size: 20px;
+  margin-left: 10%;
+}
+.item-dashboard{
+    width: 100%;
+    height: 50px;
+}
+/*  */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 25px;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: white;
+  }
+
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  .openbtn{
+      display: none;
+  }
+  .closebtn{
+      height: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/* REPONSIVE */
+@media only screen and (max-width: 680px) {
+    .list-menu-admin{
+        display:none;
+    }
+    .openbtn{
+        display: block;
+    }
+}
+@media only screen and (min-width: 680px) {
+    .list-menu-admin{
+        width: 30%;
+    }
+}
+@media only screen and (min-width: 800px) {
+    .list-menu-admin{
+        width: 25%;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .list-menu-admin{
+        width: 22%;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .list-menu-admin{
+        width: 20%;
+    }
+}
+@media only screen and (min-width: 1100px) {
+    .list-menu-admin{
+        width: 19%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .list-menu-admin{
+        width: 18%;
+    }
+}
+@media only screen and (min-width: 1300px) {
+    .list-menu-admin{
+        width: 16%;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    .list-menu-admin{
+        width: 15%;
+    }
+}
+
+

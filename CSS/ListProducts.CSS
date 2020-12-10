@@ -1,0 +1,79 @@
+.list-tableProducts{
+    width: 85%;
+    margin-left: 5%;
+    display: block;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+.top-list-products{
+    display: flex;
+    margin-top: 30px;
+    width: 60%;
+    margin-left: 20%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+    font-size: 15px;
+    color: white;
+}
+.left-item-top-list-products{
+width: 30%;
+padding-inline-start: 0;
+}
+.link-add-new-products{
+    color: white;
+list-style: none;
+text-decoration: none;
+margin-left: 5%;
+}
+.icon-plus{
+    font-size: 20px;
+}
+.text-icon{
+    font-size: 18px;
+}
+.right-item-top-list-products{
+    width: 70%;
+}
+@media only screen and (max-width: 680px) {
+    .list-tableProducts{
+        width: 100%;
+        margin-left: 0;
+}
+.top-list-products{
+    width: 100%;
+    margin-left:0%;
+    margin-top: 0%;
+}
+.left-item-top-list-products{
+    width: 40%;
+    padding-inline-start: 0;
+    }
+    .right-item-top-list-products{
+        width: 60%;
+        padding-inline-start: 0;
+        }
+}
+@media only screen and (min-width: 680px) {
+    
+}
+@media only screen and (min-width: 800px) {
+   
+}
+@media only screen and (min-width: 900px) {
+    
+}
+@media only screen and (min-width: 1000px) {
+    
+}
+@media only screen and (min-width: 1100px) {
+   
+}
+@media only screen and (min-width: 1200px) {
+    
+}
+@media only screen and (min-width: 1300px) {
+    
+}
+@media only screen and (min-width: 1500px) {
+  
+}
