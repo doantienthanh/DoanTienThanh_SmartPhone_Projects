@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2020 at 10:19 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- Generation Time: Dec 11, 2020 at 08:33 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -108,6 +108,15 @@ CREATE TABLE `details` (
   `pin_phone` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `details`
+--
+
+INSERT INTO `details` (`id`, `id_products`, `id_color`, `id_system`, `size_screen_phone`, `resolution_phone`, `weight_phone`, `memory_phone`, `camera_phone`, `pin_phone`) VALUES
+(1, 12, 10, 2, '500px', '64GB', '15 gam', '64 GB', '33px', '5000 am'),
+(2, 13, 8, 1, '500px', '64GB', '15 gam', '64 GB', '33px', '5000 am'),
+(3, 14, 8, 1, '500px', '64GB', '15 gam', '64 GB', '33px', '5000 am');
+
 -- --------------------------------------------------------
 
 --
@@ -129,6 +138,15 @@ CREATE TABLE `products` (
   `status` tinyint(1) DEFAULT NULL,
   `create_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `id_categories`, `id_brands`, `slug_products`, `name_products`, `image_products`, `list_image_products`, `price_products`, `old_price_products`, `discount`, `description`, `status`, `create_date`) VALUES
+(12, 1, 1, 'iphone-12-pro-max', 'Iphone 12 pro max', 'iphone12Promax.png', '', 20000000, 19000000, 105, 'Điện thoại được sản xuất bằng những công nghệ tốt nhất, đem lại cho người dùng những trải nghiệm tuyệt vời.', 0, '2020-12-11'),
+(13, 1, 4, 'sam-sung-s10', 'Sam sung s10', 'samsungS10.png', '', 1500000, 0, 0, 'Sam sung s10 được sản xuất nhằm đáp ứng tất cả các yêu cầu của khác hàng.', 0, '2020-12-11'),
+(14, 1, 2, 'oppo-f11-pro', 'oppo f11 pro', 'oppoF11pro.png', '', 2000000, 0, 0, 'điện thoại thể hiện được cá tính của bạn giúp bạn có thể tự tin thể hiện bản thân một cách tốt nhất.', 0, '2020-12-11');
 
 -- --------------------------------------------------------
 
@@ -261,13 +279,13 @@ ALTER TABLE `colors`
 -- AUTO_INCREMENT for table `details`
 --
 ALTER TABLE `details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `systems`

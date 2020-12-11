@@ -23,7 +23,7 @@
                 <div class="border-icon-login"><i class="fas fa-user-alt icon-login"></i></div>
             </div>
             <div class="content-login">
-                <form action="../../BACK_END/auth.php" method="post" onchange="return checkLogin()">
+                <form action="../../BACK_END/auth.php" method="post" onsubmit="return checkLogin()">
                     <div class='text-login'><i class="fas fa-user-alt icons-login"></i><input type="text"
                             name="userNameLogin" id="userNameLogin" class="item-input-login" placeholder="Users name or email">
                     </div>

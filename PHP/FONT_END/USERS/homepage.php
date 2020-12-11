@@ -15,7 +15,6 @@ require_once('../../DATA/connection.php');
     <link rel="stylesheet" href="../../../CSS/ShowProducts.CSS">
     <link rel="stylesheet" href="../../../CSS/Reponsive.CSS">
 </head>
-
 <body>
     <?php
     include('../../ELEMENTS/header.php');
@@ -34,6 +33,7 @@ require_once('../../DATA/connection.php');
     </div>
     <?php
     include('../../ELEMENTS/showProducts.php');
+
     include('../../ELEMENTS/bottom.php');
     ?>
     <script src='../../../JS/Reponsive.js'></script>
