@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2020 at 12:54 PM
+-- Generation Time: Dec 11, 2020 at 10:19 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -68,21 +68,44 @@ INSERT INTO `categories` (`id`, `name_categories`, `created_date`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `colors`
+--
+
+CREATE TABLE `colors` (
+  `id` int(11) NOT NULL,
+  `name_color` varchar(250) NOT NULL,
+  `create_date` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `colors`
+--
+
+INSERT INTO `colors` (`id`, `name_color`, `create_date`) VALUES
+(7, 'yerllow', '2020-12-20'),
+(8, 'White', '2020-12-20'),
+(9, 'Red', '2020-12-20'),
+(10, 'Black', '2020-12-20'),
+(11, 'Blue', '2020-12-20'),
+(12, 'Sky', '2020-12-20');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `details`
 --
 
 CREATE TABLE `details` (
   `id` int(11) NOT NULL,
   `id_products` int(11) NOT NULL,
-  `color_phone` varchar(220) DEFAULT NULL,
+  `id_color` int(11) NOT NULL,
+  `id_system` int(11) NOT NULL,
   `size_screen_phone` varchar(255) DEFAULT NULL,
   `resolution_phone` varchar(255) DEFAULT NULL,
   `weight_phone` varchar(255) DEFAULT NULL,
   `memory_phone` varchar(255) DEFAULT NULL,
-  `operating_system` varchar(220) NOT NULL,
   `camera_phone` varchar(300) DEFAULT NULL,
-  `pin_phone` varchar(200) DEFAULT NULL,
-  `description_phone` varchar(255) DEFAULT NULL
+  `pin_phone` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -99,7 +122,6 @@ CREATE TABLE `products` (
   `name_products` varchar(200) NOT NULL,
   `image_products` varchar(200) NOT NULL,
   `list_image_products` varchar(200) DEFAULT NULL,
-  `quantity_products` int(11) NOT NULL,
   `price_products` float NOT NULL,
   `old_price_products` float DEFAULT NULL,
   `discount` int(11) DEFAULT NULL,
@@ -107,6 +129,26 @@ CREATE TABLE `products` (
   `status` tinyint(1) DEFAULT NULL,
   `create_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `systems`
+--
+
+CREATE TABLE `systems` (
+  `id` int(11) NOT NULL,
+  `name_system` varchar(250) NOT NULL,
+  `create_date` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `systems`
+--
+
+INSERT INTO `systems` (`id`, `name_system`, `create_date`) VALUES
+(1, 'ADROID', '2020-12-20'),
+(2, 'IOS', '2020-12-20');
 
 -- --------------------------------------------------------
 
@@ -153,11 +195,20 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `colors`
+--
+ALTER TABLE `colors`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name_color` (`name_color`);
+
+--
 -- Indexes for table `details`
 --
 ALTER TABLE `details`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id_products` (`id_products`);
+  ADD UNIQUE KEY `id_products` (`id_products`),
+  ADD KEY `id_color` (`id_color`),
+  ADD KEY `id_system` (`id_system`);
 
 --
 -- Indexes for table `products`
@@ -169,6 +220,13 @@ ALTER TABLE `products`
   ADD UNIQUE KEY `image_products` (`image_products`),
   ADD KEY `id_categories` (`id_categories`),
   ADD KEY `id_brands` (`id_brands`);
+
+--
+-- Indexes for table `systems`
+--
+ALTER TABLE `systems`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name_system` (`name_system`);
 
 --
 -- Indexes for table `users`
@@ -194,6 +252,12 @@ ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `colors`
+--
+ALTER TABLE `colors`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT for table `details`
 --
 ALTER TABLE `details`
@@ -204,6 +268,12 @@ ALTER TABLE `details`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `systems`
+--
+ALTER TABLE `systems`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -219,7 +289,9 @@ ALTER TABLE `users`
 -- Constraints for table `details`
 --
 ALTER TABLE `details`
-  ADD CONSTRAINT `details_ibfk_1` FOREIGN KEY (`id_products`) REFERENCES `products` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `details_ibfk_1` FOREIGN KEY (`id_products`) REFERENCES `products` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `details_ibfk_2` FOREIGN KEY (`id_color`) REFERENCES `colors` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `details_ibfk_3` FOREIGN KEY (`id_system`) REFERENCES `systems` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `products`
