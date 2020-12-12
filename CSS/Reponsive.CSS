@@ -1,7 +1,9 @@
     /* For mobile phones: */
     
-    [class*="col-"] {
-        width: 100%;
+    @media only screen and (max-width: 768px) {
+        .top-header .col-6 {
+            width: 100%;
+        }
     }
     
     @media only screen and (min-width: 768px) {

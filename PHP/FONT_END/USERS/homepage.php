@@ -37,6 +37,7 @@ require_once('../../DATA/connection.php');
     include('../../ELEMENTS/bottom.php');
     ?>
     <script src='../../../JS/Reponsive.js'></script>
+    <script src='../../../JS/Products.js'></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </body>
 

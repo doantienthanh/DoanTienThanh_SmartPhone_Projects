@@ -1,3 +1,88 @@
+[class*="col-"] {
+    float: left;
+    padding: 0.1%;
+}
+
+@media only screen and (max-width:1000px) {
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+    .col-s-2 {
+        width: 16.66%;
+    }
+    .col-s-3 {
+        width: 25%;
+    }
+    .col-s-4 {
+        width: 33.33%;
+    }
+    .col-s-5 {
+        width: 41.66%;
+    }
+    .col-s-6 {
+        width: 50%;
+    }
+    .col-s-7 {
+        width: 58.33%;
+    }
+    .col-s-8 {
+        width: 66.66%;
+    }
+    .col-s-9 {
+        width: 75%;
+    }
+    .col-s-10 {
+        width: 83.33%;
+    }
+    .col-s-11 {
+        width: 91.66%;
+    }
+    .col-s-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+}
+
 .body-show-products {
     width: 100%;
     height: auto;
@@ -12,77 +97,133 @@
 }
 
 .center-show-products {
-    width: 2%;
+    width: 4%;
 }
 
 .right-show-products {
-    width: 78%;
+    width: 76%;
     height: auto;
     display: block;
 }
+
+
 /* PRODUCTS */
-.row-products{
+
+.row-products {
     width: 100%;
     height: 600px;
     margin-bottom: 20px;
-    display:flex;
-    padding-left: 5%;
+    display: flex;
 }
-.link-item-products{
+
+.row-products::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.link-item-products {
     list-style: none;
     text-decoration: none;
     color: black;
     width: 18%;
     margin-right: 0.1%;
-    
 }
-.item-products{
+
+.item-products {
     color: black;
     width: 100%;
     height: 360px;
     border-radius: 4px;
     box-shadow: 5px 10px 18px #888888;
 }
-.header-card-products{
+
+.header-card-products {
     width: 100%;
     height: 60%;
 }
-.image-card-products{
+
+.image-card-products {
     width: 100%;
     margin-left: 0%;
     height: 100%;
 }
-.center-card-products{
-    width: 100%;
-    height: 20%;
+
+.image-card-products:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
-.name-of-phone{
+
+.center-card-products {
+    width: 100%;
+    height: 18%;
+}
+
+.name-of-phone {
     width: 100%;
     text-align: center;
 }
-.price-of-phone{
+
+.price-of-phone {
     width: 100%;
     text-align: center;
+    font-size: 15px;
 }
-.bootom-card-products{
+
+.price-of-phone .priceSales {
+    font-size: 16px;
+    color: red;
+}
+
+.bootom-card-products {
     width: 100%;
-    height: 10%;
+    height: 8%;
     display: flex;
     text-align: center;
     padding-left: 30%;
 }
 
-.icon-card{
+.icon-card {
     color: darkgoldenrod;
 }
-.item-products:hover{
-  width: 104%;
-  height: 365px;
-  margin-left: -2%;
-  margin-top: -2px;
+
+.item-products:hover {
+    width: 104%;
+    height: 365px;
+    margin-left: -2%;
+    margin-top: -2px;
 }
+
+.add-to-cart-card {
+    display: none;
+}
+
+.add-to-cart-card {
+    width: 100%;
+    height: 9%;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: gray;
+    color: white;
+}
+
+.icon-add-to-carts {
+    font-size: 24px;
+    color: white;
+}
+
+
 /* PRODUCTS SALE*/
-.btn-sales{
+
+.btn-sales {
     position: absolute;
     margin-top: 10px;
     margin-left: 10px;
@@ -93,5 +234,67 @@
     background-color: red;
     color: white;
     font-size: 15px;
-    border:none;
+    border: none;
+}
+
+@media only screen and (max-width: 680px) {
+    .col-2 {
+        width: 24%;
+    }
+    .btn-sales {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .body-show-products {
+        display: block;
+    }
+    .right-show-products {
+        width: 100%;
+    }
+    .row-products {
+        margin-left: 1%;
+        height: auto;
+    }
+    .item-products {
+        width: 100%;
+        height: 200px;
+    }
+    .header-card-products {
+        height: 50%;
+    }
+    .image-card-products {
+        height: 100%;
+    }
+    .name-of-phone {
+        font-size: 10px;
+    }
+    .price-of-phone .priceSales {
+        font-size: 9px;
+    }
+    .price-of-phone .prices {
+        font-size: 8px;
+    }
+    .price-of-phone {
+        font-size: 11px;
+    }
+    .center-card-products {
+        height: 25%;
+    }
+    .icon-card {
+        font-size: 10px;
+    }
+    .bootom-card-products {
+        padding-left: 20%;
+        height: 10%;
+    }
+    .item-products:hover {
+        width: 110%;
+        height: 204px;
+        margin-left: -5%;
+        margin-top: -2px;
+    }
+    .icon-add-to-carts {
+        font-size: 13px;
+    }
 }
