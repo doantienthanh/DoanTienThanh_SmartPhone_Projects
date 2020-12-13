@@ -12,8 +12,8 @@ require_once('../../DATA/connection.php');
     <link rel="stylesheet" href="../../../CSS/Element.CSS">
     <link rel="stylesheet" href="../../../CSS/Homepage.CSS">
     <link rel="stylesheet" href="../../../CSS/Bottom.CSS">
-    <link rel="stylesheet" href="../../../CSS/ShowProducts.CSS">
     <link rel="stylesheet" href="../../../CSS/Reponsive.CSS">
+    <link rel="stylesheet" href="../../../CSS/ShowProducts.CSS">
 </head>
 <body>
     <?php

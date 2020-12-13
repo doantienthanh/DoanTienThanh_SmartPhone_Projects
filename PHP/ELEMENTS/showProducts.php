@@ -1,161 +1,50 @@
 <div class="body-show-products">
     <div class="left-show-products">
-        left
+        <div class="item-left-show-products">
+            <div class="tile-left-show-products">
+                <h2 class="title-products-left">ĐÁNH GIÁ CÁO</h2>
+            </div>
+            <div class="row-list-products">
+            <?php 
+            $products1 = "SELECT * FROM products LIMIT 5";
+            $resultProducts1 = $connection->query($products1);
+            while ($element = $resultProducts1->fetch_assoc()) {
+               include('elementListProducts.php');
+            }
+            ?>
+            </div>
+        </div>
     </div>
     <div class="center-show-products">
     </div>
     <div class="right-show-products">
+        <div class="title-show-products">
+            <h1>SẢN PHẨM MỚI NHẤT</h1>
+        </div>
         <div class="row-products">
             <div class="row">
-                <div class="col-2 col-s-3">
-                    <a href="#" class="link-item-products">
-                        <div class="item-products" onmouseover="onAddToCart()" onmouseout="outAddToCart()">
-                            <div class="header-card-products">
-                                <img src="../../../IMAGE/iphone12Promax.png" class="image-card-products">
-                            </div>
-                            <div class="center-card-products">
-                                <h4 class="name-of-phone">IPHONE 12 PRO MAX</h4>
-                                <p class="price-of-phone">20 000 000 đ</p>
-                            </div>
-                            <div class="bootom-card-products">
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                            </div>
-                            <button class="add-to-cart-card" id="btnAddToCartCard">
-                                <i class="fas fa-shopping-basket icon-add-to-carts"></i>
-                            </button>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-2 col-s-3">
-                    <a href="#" class="link-item-products">
-                        <div class="item-products">
-                            <div class="header-card-products">
-                                <button class="btn-sales">20%</button>
-                                <img src="../../../IMAGE/iphone12Promax.png" class="image-card-products">
-                            </div>
-                            <div class="center-card-products">
-                                <h4 class="name-of-phone">IPHONE 12 PRO MAX</h4>
-                                <p class="price-of-phone"><b class="priceSales">20 000 000<sup>đ</b></sup> <span class="prices"><sub><strike>22 000
-                                                000<sup>đ</sup></strike></sub></span></p>
-                            </div>
-                            <div class="bootom-card-products">
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                            </div>
-                            <button class="add-to-cart-card" id="btnAddToCartCard">
-                                <i class="fas fa-shopping-basket icon-add-to-carts"></i>
-                            </button>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-2 col-s-3">
-                    <a href="#" class="link-item-products">
-                        <div class="item-products">
-                            <div class="header-card-products">
-                                <button class="btn-sales">20%</button>
-                                <img src="../../../IMAGE/iphone12Promax.png" class="image-card-products">
-                            </div>
-                            <div class="center-card-products">
-                                <h4 class="name-of-phone">IPHONE 12 PRO MAX</h4>
-                                <p class="price-of-phone">20 000 000<sup>đ</sup> <span><sub><strike>22 000
-                                                000<sup>đ</sup></strike></sub></span></p>
-                            </div>
-                            <div class="bootom-card-products">
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                            </div>
-                            <button class="add-to-cart-card" id="btnAddToCartCard">
-                                <i class="fas fa-shopping-basket icon-add-to-carts"></i>
-                            </button>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-2 col-s-3">
-                    <a href="#" class="link-item-products">
-                        <div class="item-products">
-                            <div class="header-card-products">
-                                <button class="btn-sales">20%</button>
-                                <img src="../../../IMAGE/iphone12Promax.png" class="image-card-products">
-                            </div>
-                            <div class="center-card-products">
-                                <h4 class="name-of-phone">IPHONE 12 PRO MAX</h4>
-                                <p class="price-of-phone">20 000 000<sup>đ</sup> <span><sub><strike>22 000
-                                                000<sup>đ</sup></strike></sub></span></p>
-                            </div>
-                            <div class="bootom-card-products">
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                            </div>
-                            <button class="add-to-cart-card" id="btnAddToCartCard">
-                                <i class="fas fa-shopping-basket icon-add-to-carts"></i>
-                            </button>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-2 col-s-3">
-                    <a href="#" class="link-item-products">
-                        <div class="item-products">
-                            <div class="header-card-products">
-                                <button class="btn-sales">20%</button>
-                                <img src="../../../IMAGE/iphone12Promax.png" class="image-card-products">
-                            </div>
-                            <div class="center-card-products">
-                                <h4 class="name-of-phone">IPHONE 12 PRO MAX</h4>
-                                <p class="price-of-phone">20 000 000<sup>đ</sup> <span><sub><strike>22 000
-                                                000<sup>đ</sup></strike></sub></span></p>
-                            </div>
-                            <div class="bootom-card-products">
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                            </div>
-                            <button class="add-to-cart-card" id="btnAddToCartCard">
-                                <i class="fas fa-shopping-basket icon-add-to-carts"></i>
-                            </button>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-2 col-s-3">
-                    <a href="#" class="link-item-products">
-                        <div class="item-products">
-                            <div class="header-card-products">
-                                <button class="btn-sales">20%</button>
-                                <img src="../../../IMAGE/iphone12Promax.png" class="image-card-products">
-                            </div>
-                            <div class="center-card-products">
-                                <h4 class="name-of-phone">IPHONE 12 PRO MAX</h4>
-                                <p class="price-of-phone">20 000 000<sup>đ</sup> <span><sub><strike>22 000
-                                                000<sup>đ</sup></strike></sub></span></p>
-                            </div>
-                            <div class="bootom-card-products">
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                                <i class='fas fa-star icon-card'></i>
-                            </div>
-                            <button class="add-to-cart-card" id="btnAddToCartCard">
-                                <i class="fas fa-shopping-basket icon-add-to-carts"></i>
-                            </button>
-                        </div>
-                    </a>
-                </div>  
+                <?php
+                $products = "SELECT * FROM products LIMIT 5";
+                $resultProducts = $connection->query($products);
+                while ($element = $resultProducts->fetch_assoc()) {
+                   include('elementProducts.php');
+                }
+                ?>
+            </div>
+        </div>
+        <div class="title-show-products">
+            <h1>SẢN PHẨM GIẢM GIÁ</h1>
+        </div>
+        <div class="row-products">
+            <div class="row">
+                <?php
+                $products = "SELECT * FROM products WHERE discount!=0 LIMIT 5";
+                $resultProducts = $connection->query($products);
+                while ($element = $resultProducts->fetch_assoc()) {
+                   include('elementProducts.php');
+                }
+                ?>
+            </div>
         </div>
     </div>
-</div>
 </div>
