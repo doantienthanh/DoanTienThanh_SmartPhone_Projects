@@ -29,12 +29,28 @@ require_once('../../DATA/connection.php');
         </div>
         <div class="col-10 body-details">
             <form action="" method="post">
-                <!-- <?php
+                <?php
                 if(isset($_GET['product'])){
                     $slug=$_GET['product'];
                     $products="SELECT * FROM products WHERE slug_products='$slug'";
                     $resultProducts=$connection->query($products);
                     while ($element = $resultProducts->fetch_assoc()) {
+                    
+                        $status="";
+                        if($element['status']==0){
+                            $status="Còn hàng ";
+                        }else{
+                            $status="Hết hàng ";
+                        }
+                        $id_brands=$element['id_brands'];
+                        $brands="SELECT * FROM brands WHERE id=$id_brands";
+                        $resultBrands=$connection->query($brands);
+                        
+                        while ($elemementbrand = $resultBrands->fetch_assoc()) {
+                            $id_products=$element['id'];
+                            $details="SELECT * FROM details WHERE id_products='$id_products'";
+                            $resultDetails=$connection->query($products);
+                    while ($elementDetails = $resultDetails->fetch_assoc()) {
                         echo'
                         <div class="conten-details">
                             <div class="image-content-details">
@@ -52,19 +68,17 @@ require_once('../../DATA/connection.php');
                                 <h1 class="name-products-detials">'.strtoupper($element['name_products']).'</h1>
                                 <div class="info-details">
                                     <div class="left-info-details">
-                                        <p class="item-lefts-details"><b class="title-item-details">GIÁ:&nbsp;&nbsp;</b><sup>'.number_format($element['price_products'],0,",",".").'<sup>đ</sup></b></sup> <span><sub><strike>'.number_format($element['old_price_products'],0,",",".").'<sup>đ</sup></strike></sub></span>
+                                        <p class="item-lefts-details"><b class="title-item-details">GIÁ:&nbsp;&nbsp;</b>'.number_format($element['price_products'],0,",",".").'<sup>đ</b></sup> <span><sub><strike>'.number_format($element['old_price_products'],0,",",".").'<sup>đ</sup></strike></sub></span>
                                         </p>
                                         <p class="item-lefts-details"><b class="title-item-details">NHÀ SẢN
-                                                XUẤT:&nbsp;&nbsp;</b>sds</p>
+                                                XUẤT:&nbsp;&nbsp;</b>'.$elemementbrand['name_brand'].'</p>
                                         <p class="item-lefts-details"><b class="title-item-details">NGÀY SẢN
-                                                XUẤT:&nbsp;&nbsp;</b>saddas</p>
-                                        <p class="item-lefts-details"><b class="title-item-details">MÔ TẢ:&nbsp;&nbsp;</b>sản
-                                            phẩm được sản xuất trên nhiều dây chuyền hiệu quả cáo với nhiều chất lượng hànd sản
-                                            phẩm được sản xuất trên nhiều dây chuyền hiệu quả cáo với nhiều chất lượng hànd</p>
+                                                XUẤT:&nbsp;&nbsp;</b>'.$element['create_date'].'</p>
+                                        <p class="item-lefts-details"><b class="title-item-details">MÔ TẢ:&nbsp;&nbsp;</b>'.$element['description'].'</p>
                                         <p class="item-lefts-details"><b class="title-item-details">TRẠNG
-                                                THÁI:&nbsp;&nbsp;</b>sadass</p>
+                                                THÁI:&nbsp;&nbsp;</b>'.$status.'</p>
                                         <p class="item-lefts-details"><b class="title-item-details">ƯU
-                                                ĐÃI:&nbsp;&nbsp;</b>sadass</p>
+                                                ĐÃI:&nbsp;&nbsp;</b>Miễn phí vận chuyển</p>
                                     </div>
                                     <div class="right-info-details">
                                         <table class="table-details-products">
@@ -78,7 +92,7 @@ require_once('../../DATA/connection.php');
                                             </tr>
                                             <tr class="item-tables">
                                                 <th class="item-title-table-products">MÀN HÌNH</th>
-                                                <td class="items-title-table-products">55577855</td>
+                                                <td class="items-title-table-products">'.$elementDetails['id_color'].'</td>
                                             </tr>
                                             <tr class="item-tables">
                                                 <th class="item-title-table-products">BỘ NHỚ</th>
@@ -112,6 +126,10 @@ require_once('../../DATA/connection.php');
                         ';
 
                     }
+                }
+            }
+                }else{
+                    echo"Không có sản phẩm !";
                 }
              
                 ?>
