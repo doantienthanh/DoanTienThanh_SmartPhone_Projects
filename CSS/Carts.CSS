@@ -1,0 +1,118 @@
+        .table-list-carts {
+            width: 90%;
+            color: white;
+            border: 1px solid black;
+            height: auto;
+            overflow: scroll;
+        }
+        
+        .item-list-carts {
+            background-color: darkgray;
+            width: 100%;
+            height: 40px;
+        }
+        
+        .item-list-table-carts {
+            color: black;
+            height: 50px;
+        }
+        
+        .item-title-table-list-carts {
+            height: auto;
+        }
+        
+        .item-products-table-list-carts {
+            border: 1px solid black;
+            width: 16%;
+            text-align: center;
+            height: 70px;
+        }
+        
+        .quantity-carts {
+            height: 50px;
+            width: 98%;
+            display: flex;
+            height: 100%;
+        }
+        
+        .form-carts {
+            width: 35%;
+            height: 70px;
+        }
+        
+        .btn-show-quantity-carts {
+            height: 60px;
+            margin-top: 5px;
+            width: 30%;
+            border: none;
+            outline: none;
+            background-color: white;
+        }
+        
+        .btn-carts {
+            outline: none;
+            font-size: 20px;
+            width: 80%;
+            height: 30px;
+            margin-top: 20px;
+            margin-left: 10%;
+            box-shadow: 1px 2px;
+        }
+        
+        .btn-carts:hover {
+            width: 82%;
+            height: 32px;
+            margin-top: 19px;
+            margin-left: 9%;
+        }
+        
+        .image-in-cart {
+            width: 50%;
+            height: 95%;
+        }
+        
+        .btn-delete-products-in-carts {
+            outline: none;
+            background-color: white;
+            border: none;
+            font-size: 30px;
+        }
+        
+        .btn-delete-products-in-carts {
+            font-size: 30px;
+            color: red;
+        }
+        
+        .payment-component {
+            margin-top: 10px;
+            display: flex;
+        }
+        
+        .btn-cartses {
+            height: 50px;
+            font-size: 25px;
+        }
+        
+        .btn-payment {
+            width: 100%;
+            outline: none;
+            border: none;
+            box-shadow: 2px 3px 4px 2px;
+        }
+        
+        .btn-payment:hover {
+            width: 102%;
+            margin-left: -1%;
+            height: 52px;
+            margin-top: 9px;
+            background-color: seagreen;
+            color: white;
+            font-size: 26px;
+        }
+        
+        .btn-total-price {
+            width: 20%;
+            margin-left: 20%;
+            color: red;
+            outline: none;
+        }

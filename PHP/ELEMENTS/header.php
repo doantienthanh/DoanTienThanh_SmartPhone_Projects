@@ -11,7 +11,7 @@
         </div>
         <div class="col-2  right-main-header">
             <div class="quantity-customer-cart">0</div>
-            <span><i class='fas fa-shopping-basket customer-cart'></i></span>
+            <span><a href="carts.php" class="link-to-cart"><i class='fas fa-shopping-basket customer-cart'></a></i></span>
             <span class="price-customer-carts">20000000đ</span>
         </div>
     </div>

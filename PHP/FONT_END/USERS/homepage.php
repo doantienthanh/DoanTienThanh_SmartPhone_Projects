@@ -18,6 +18,11 @@ require_once('../../DATA/connection.php');
 <body>
     <?php
     include('../../ELEMENTS/header.php');
+    if(isset($_GET['massageAddCart'])){
+        echo '<script language="javascript">';
+        echo 'alert("'.$_GET['massageAddCart'].'")';
+        echo '</script>';
+    }
     ?>
     <div class="main-body">
         <div class="col-2 category">

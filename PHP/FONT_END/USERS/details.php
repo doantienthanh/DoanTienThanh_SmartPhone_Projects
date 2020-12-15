@@ -28,7 +28,6 @@ require_once('../../DATA/connection.php');
             ?>
         </div>
         <div class="col-10 body-details">
-            <form action="" method="post">
                 <?php
                 if(isset($_GET['product'])){
                     $slug=$_GET['product'];
@@ -49,8 +48,16 @@ require_once('../../DATA/connection.php');
                         while ($elemementbrand = $resultBrands->fetch_assoc()) {
                             $id_products=$element['id'];
                             $details="SELECT * FROM details WHERE id_products='$id_products'";
-                            $resultDetails=$connection->query($products);
+                            $resultDetails=$connection->query($details);
                     while ($elementDetails = $resultDetails->fetch_assoc()) {
+                        $id_system=$elementDetails['id_system'];
+                        $systems="SELECT * FROM systems WHERE id='$id_system'";
+                            $resultSystems=$connection->query($systems);
+                    while ($elementSystem = $resultSystems->fetch_assoc()) {
+                        $id_color=$elementDetails['id_color'];
+                        $colors="SELECT * FROM colors WHERE id='$id_color'";
+                            $resultColors=$connection->query($colors);
+                    while ($elementColors = $resultColors->fetch_assoc()) {
                         echo'
                         <div class="conten-details">
                             <div class="image-content-details">
@@ -84,42 +91,46 @@ require_once('../../DATA/connection.php');
                                         <table class="table-details-products">
                                             <tr class="item-tables">
                                                 <th class="item-title-table-products">HỆ ĐIỀU HÀNH</th>
-                                                <td class="items-title-table-products">Bill Gates</td>
+                                                <td class="items-title-table-products">'.$elementSystem['name_system'].'</td>
                                             </tr>
                                             <tr class="item-tables">
-                                                <th class="item-title-table-products">MÀU</th>
-                                                <td class="items-title-table-products">55577854</td>
-                                            </tr>
+                                            <th class="item-title-table-products">BỘ NHỚ</th>
+                                            <td class="items-title-table-products">'.$elementDetails['memory_phone'].'</td>
+                                        </tr>
+                                        <tr class="item-tables">
+                                        <th class="item-title-table-products">PIN</th>
+                                        <td class="items-title-table-products">'.$elementDetails['pin_phone'].'</td>
+                                       </tr>
+                                          
                                             <tr class="item-tables">
                                                 <th class="item-title-table-products">MÀN HÌNH</th>
-                                                <td class="items-title-table-products">'.$elementDetails['id_color'].'</td>
+                                                <td class="items-title-table-products">'.$elementDetails['size_screen_phone'].'</td>
                                             </tr>
                                             <tr class="item-tables">
                                                 <th class="item-title-table-products">BỘ NHỚ</th>
-                                                <td class="items-title-table-products">Bill Gates</td>
+                                                <td class="items-title-table-products">'.$elementDetails['resolution_phone'].'</td>
                                             </tr>
                                             <tr class="item-tables">
                                                 <th class="item-title-table-products">ĐỘ PHÂN GIẢI</th>
-                                                <td class="items-title-table-products">55577854</td>
+                                                <td class="items-title-table-products">'.$elementDetails['resolution_phone'].'</td>
                                             </tr>
                                             <tr class="item-tables">
                                                 <th class="item-title-table-products">MÁY ẢNH</th>
-                                                <td class="items-title-table-products">55577855</td>
+                                                <td class="items-title-table-products">'.$elementDetails['camera_phone'].'</td>
                                             </tr>
+                                           
                                             <tr class="item-tables">
-                                                <th class="item-title-table-products">PIN</th>
-                                                <td class="items-title-table-products">Bill Gates</td>
-                                            </tr>
-                                            <tr class="item-tables">
-                                                <th class="item-title-table-products">BỘ NHỚ</th>
-                                                <td class="items-title-table-products">55577854</td>
+                                                <th class="item-title-table-products">MÀU</th>
+                                                <td class="items-title-table-products">'.$elementColors['name_color'].'</td>
                                             </tr>
                                         </table>
                                     </div>
                                 </div>
                                 <div class="bottom-details-products">
-                                    <input type="number" class="input-quantity" placeholder="Số lượng" min="1" value="1">
-                                    <button class="btn-add-to-cart-details">ADD TO CART</button>
+                                <form action="../../BACK_END/PRODUCTS/orders.php?orders='.$element['slug_products'].'" method="POST" name="form-orders" type="submit">
+                                    <input type="number" class="input-quantity" name="quantity_orders" placeholder="Số lượng" min="1" value="1">
+                                    <button class="btn-add-to-cart-details" name="btn_add_to_cart">ADD TO CART</button>
+                                </form>
                                 </div>
                             </div>
                         </div>
@@ -128,12 +139,13 @@ require_once('../../DATA/connection.php');
                     }
                 }
             }
+        }
+    }
                 }else{
                     echo"Không có sản phẩm !";
                 }
              
                 ?>
-            </form>
         </div>
     </div>
     <?php

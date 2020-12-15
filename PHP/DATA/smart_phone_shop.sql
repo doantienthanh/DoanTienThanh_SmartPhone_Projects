@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2020 at 08:33 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.5
+-- Generation Time: Dec 15, 2020 at 12:10 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,6 +44,32 @@ INSERT INTO `brands` (`id`, `name_brand`, `created_date`) VALUES
 (4, 'SAM SUNG', '2000-05-20'),
 (5, 'SONY', '2000-05-20'),
 (6, 'NOKIA', '2000-05-20');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `carts`
+--
+
+CREATE TABLE `carts` (
+  `id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `id_product` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `created_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `carts`
+--
+
+INSERT INTO `carts` (`id`, `id_user`, `id_product`, `quantity`, `created_date`) VALUES
+(4, 2, 12, 2, '2020-12-15'),
+(5, 2, 14, 1, '2020-12-15'),
+(14, 3, 12, 1, '2020-12-15'),
+(15, 3, 13, 2, '2020-12-15'),
+(16, 3, 14, 1, '2020-12-15'),
+(17, 3, 16, 1, '2020-12-15');
 
 -- --------------------------------------------------------
 
@@ -115,7 +141,23 @@ CREATE TABLE `details` (
 INSERT INTO `details` (`id`, `id_products`, `id_color`, `id_system`, `size_screen_phone`, `resolution_phone`, `weight_phone`, `memory_phone`, `camera_phone`, `pin_phone`) VALUES
 (1, 12, 10, 2, '500px', '64GB', '15 gam', '64 GB', '33px', '5000 am'),
 (2, 13, 8, 1, '500px', '64GB', '15 gam', '64 GB', '33px', '5000 am'),
-(3, 14, 8, 1, '500px', '64GB', '15 gam', '64 GB', '33px', '5000 am');
+(3, 14, 8, 1, '500px', '64GB', '15 gam', '64 GB', '33px', '5000 am'),
+(4, 15, 7, 1, '14', '4521', '456', '26545', '8878', '564'),
+(5, 16, 8, 1, '14', '4521', '456', '26545', '8878', '564');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `id_user` int(11) DEFAULT NULL,
+  `id_products` varchar(255) DEFAULT NULL,
+  `quantity_orders` int(11) DEFAULT NULL,
+  `total_price` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -146,7 +188,9 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`id`, `id_categories`, `id_brands`, `slug_products`, `name_products`, `image_products`, `list_image_products`, `price_products`, `old_price_products`, `discount`, `description`, `status`, `create_date`) VALUES
 (12, 1, 1, 'iphone-12-pro-max', 'Iphone 12 pro max', 'iphone12Promax.png', '', 20000000, 19000000, 105, 'Điện thoại được sản xuất bằng những công nghệ tốt nhất, đem lại cho người dùng những trải nghiệm tuyệt vời.', 0, '2020-12-11'),
 (13, 1, 4, 'sam-sung-s10', 'Sam sung s10', 'samsungS10.png', '', 1500000, 0, 0, 'Sam sung s10 được sản xuất nhằm đáp ứng tất cả các yêu cầu của khác hàng.', 0, '2020-12-11'),
-(14, 1, 2, 'oppo-f11-pro', 'oppo f11 pro', 'oppoF11pro.png', '', 2000000, 0, 0, 'điện thoại thể hiện được cá tính của bạn giúp bạn có thể tự tin thể hiện bản thân một cách tốt nhất.', 0, '2020-12-11');
+(14, 1, 2, 'oppo-f11-pro', 'oppo f11 pro', 'oppoF11pro.png', '', 2000000, 0, 0, 'điện thoại thể hiện được cá tính của bạn giúp bạn có thể tự tin thể hiện bản thân một cách tốt nhất.', 0, '2020-12-11'),
+(15, 1, 1, 'iphone-8', 'Iphone 8', 'iphone!.png', '', 200000, 0, 0, 'Iphasdjasdhasdhasdhasdhasdhasdhasdhasdhasdhasdhasdhasdhasdhasdhasdhasdh', 0, '2020-12-15'),
+(16, 1, 2, 'oppo-a71', 'Oppo A71', 'A71-6.png', '', 123123, 0, 0, '', 0, '2020-12-15');
 
 -- --------------------------------------------------------
 
@@ -207,6 +251,14 @@ ALTER TABLE `brands`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `carts`
+--
+ALTER TABLE `carts`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_user` (`id_user`),
+  ADD KEY `id_product` (`id_product`);
+
+--
 -- Indexes for table `categories`
 --
 ALTER TABLE `categories`
@@ -227,6 +279,13 @@ ALTER TABLE `details`
   ADD UNIQUE KEY `id_products` (`id_products`),
   ADD KEY `id_color` (`id_color`),
   ADD KEY `id_system` (`id_system`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Indexes for table `products`
@@ -264,6 +323,12 @@ ALTER TABLE `brands`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `carts`
+--
+ALTER TABLE `carts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
@@ -279,13 +344,19 @@ ALTER TABLE `colors`
 -- AUTO_INCREMENT for table `details`
 --
 ALTER TABLE `details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `systems`
@@ -304,12 +375,25 @@ ALTER TABLE `users`
 --
 
 --
+-- Constraints for table `carts`
+--
+ALTER TABLE `carts`
+  ADD CONSTRAINT `carts_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `carts_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`) ON DELETE CASCADE;
+
+--
 -- Constraints for table `details`
 --
 ALTER TABLE `details`
   ADD CONSTRAINT `details_ibfk_1` FOREIGN KEY (`id_products`) REFERENCES `products` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `details_ibfk_2` FOREIGN KEY (`id_color`) REFERENCES `colors` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `details_ibfk_3` FOREIGN KEY (`id_system`) REFERENCES `systems` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `products`

@@ -1,10 +1,9 @@
 function onAddToCart(id) {
-   var btnshow=document.getElementById(id);
-   btnshow.style.display ="block";
-  
+    var btnshow = document.getElementById(id);
+    btnshow.style.display = "block";
 }
 
 function outAddToCart(id) {
-    var btnshow=document.getElementById(id);
-    btnshow.style.display ="none";
+    var btnshow = document.getElementById(id);
+    btnshow.style.display = "none";
 }
