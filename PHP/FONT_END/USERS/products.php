@@ -11,19 +11,27 @@ require_once('../../DATA/connection.php');
     <link rel="stylesheet" href="../../../CSS/Element.CSS">
     <link rel="stylesheet" href="../../../CSS/Bottom.CSS">
     <link rel="stylesheet" href="../../../CSS/Reponsive.CSS">
+    <link rel="stylesheet" href="../../../CSS/ShowProducts.CSS">
+    <link rel="stylesheet" href="../../../CSS/ProductsPage.CSS">
 </head>
 <body>
 <?php
     include('../../ELEMENTS/header.php');
     ?>
-    <div class="body-page">
+    <div class="body-products-page">
     <div class="col-2 category">
       <?php
         include('../../ELEMENTS/categories.php');
       ?>
         </div>
         <div class="col-10 slide-shop">
-          
+        <?php
+         $products="SELECT * FROM products";
+         $queryProducts=$connection->query($products);
+         foreach($queryProducts as $element){
+           include('../../ELEMENTS/elementProducts.php');
+         }
+        ?>
         </div>
     </div>
     <?php

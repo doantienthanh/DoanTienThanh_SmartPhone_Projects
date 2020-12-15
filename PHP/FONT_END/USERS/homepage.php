@@ -38,7 +38,6 @@ require_once('../../DATA/connection.php');
     </div>
     <?php
     include('../../ELEMENTS/showProducts.php');
-
     include('../../ELEMENTS/bottom.php');
     ?>
     <script src='../../../JS/Reponsive.js'></script>

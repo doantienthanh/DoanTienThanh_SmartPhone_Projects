@@ -697,6 +697,7 @@ p.infor-smart-phone {
         outline: none;
         background-color: gray;
         color: white;
+        border-radius: 5px;
     }
     .icon-add-to-carts {
         font-size: 24px;

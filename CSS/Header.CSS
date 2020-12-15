@@ -199,6 +199,9 @@ ul {
     width: 20%;
     padding-inline-start: 0px;
 }
+.price-customer-carts,.quantity-customer-cart{
+    color: red;
+}
 
 .btn-contact {
     margin-top: 5%;
