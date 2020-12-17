@@ -27,7 +27,7 @@
 </form>
 </div>
 ';
-} else {
+} elseif($element['discount'] != 0){
     echo '
 <div class="col-2 col-s-4" onmouseover="onAddToCart('.$element['id'].')" onmouseout="outAddToCart('.$element['id'].')">
 <a href="details.php?product='.$element['slug_products'].'" class="link-item-products">
@@ -48,7 +48,6 @@ class="prices"><sub><strike>'.number_format($element['price_products'],0,",","."
 <i class="fas fa-star icon-card"></i>
 <i class="fas fa-star icon-card"></i>
 </div>
-
 </div>
 </a>
 <form action="../../BACK_END/PRODUCTS/orders.php?orders='.$element['slug_products'].'" method="POST" type="submit">

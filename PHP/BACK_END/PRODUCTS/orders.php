@@ -1,7 +1,7 @@
 <?php
 require_once('../../DATA/connection.php');
 if(!isset($_COOKIE['id_user'])){
-     $massage="Bạn cần login trước khi vào trang này!";
+     $massage="Trang  này không tồn tại!";
      header("location:../../FONT_END/USERS/homepage.php?massageAddCart=$massage");
 }
 function getIdUser(){
@@ -11,7 +11,6 @@ function getIdUser(){
           return false;
      }
 }
-
 if(isset($_POST['btn_add_to_cart'])){
      if(getIdUser()==true){
           addCart($connection);

@@ -56,8 +56,8 @@
             </a>
         </ul>
         <ul class="search-products">
-            <form action="#" method="get">
-                <input type="text" class="input-search-products" placeholder="Search products...">
+            <form action="search.php" method="POST">
+                <input type="text" class="input-search-products" name="search_input" placeholder="Search products...">
                 <i class='fas fa-search icon-search-prducts'></i>
             </form>
         </ul>

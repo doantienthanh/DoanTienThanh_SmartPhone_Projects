@@ -1,0 +1,9 @@
+.body-search-page {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+}
+
+.result_search_titals {
+    color: red;
+}

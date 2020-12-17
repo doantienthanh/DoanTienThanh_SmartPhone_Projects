@@ -606,7 +606,7 @@ p.infor-smart-phone {
     }
     .row-products {
         width: 100%;
-        height: 600px;
+        height: auto;
         margin-bottom: 20px;
         display: flex;
     }

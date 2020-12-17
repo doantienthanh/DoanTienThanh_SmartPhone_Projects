@@ -22,6 +22,10 @@ require_once('../../DATA/connection.php');
         echo '<script language="javascript">';
         echo 'alert("'.$_GET['massageAddCart'].'")';
         echo '</script>';
+    }elseif(isset($_GET['massage'])){
+        echo '<script language="javascript">';
+        echo 'alert("'.$_GET['massage'].'")';
+        echo '</script>';
     }
     ?>
     <div class="main-body">
